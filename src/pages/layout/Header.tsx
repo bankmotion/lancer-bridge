@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { MagnifyingGlassIcon, Bars3Icon } from "@heroicons/react/24/outline";
 import { navigationItems } from "@/types/navigation";
 import MobileMenu from "./MobileMenu";
-import ThemeToggle from "@/components/common/ThemeToggle";
 
 const Header: React.FC = () => {
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
@@ -66,7 +65,6 @@ const Header: React.FC = () => {
 
           {/* Right Section */}
           <div className="flex items-center space-x-4">
-            <ThemeToggle />
             <button className="p-2 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
               <MagnifyingGlassIcon className="h-6 w-6" />
             </button>
