@@ -19,8 +19,8 @@ const Header: React.FC = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 dark:bg-gray-900/95 shadow-md z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-4 ">
+        <div className="flex items-center justify-start h-20 gap-10">
           {/* Logo */}
           <Link
             to="/"
@@ -31,13 +31,13 @@ const Header: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-start space-x-8">
             {navigationItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
                 onClick={(e) => handleNavigation(e, item.sectionId)}
-                className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                className="text-gray-700 dark:text-gray-300 text-xl hover:text-primary-600 dark:hover:text-primary-400 font-semibold transition-colors"
               >
                 {item.title}
               </Link>

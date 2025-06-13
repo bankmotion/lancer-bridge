@@ -97,9 +97,9 @@ const HeroSection = () => {
         className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/70 z-10"
       />
       <div className="max-w-7xl mx-auto w-full relative z-20">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+        <div className="max-w-5xl mx-auto px-4 text-center">
           <AnimatedSection direction="down" delay={0.2}>
-            <span className="text-yellow-400 text-sm tracking-widest mb-2 inline-block font-medium bg-black/30 px-4 py-2 rounded-full">
+            <span className="text-yellow-400 text-md tracking-widest mb-2 inline-block font-medium bg-black/30 px-4 py-2 rounded-full">
               IDEAS, SOLUTIONS, ENGINEERING.
             </span>
           </AnimatedSection>
@@ -112,7 +112,7 @@ const HeroSection = () => {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
             >
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 mt-10 leading-tight">
+              <h1 className="text-4xl md:text-6xl lg:text-[80px] font-bold mb-6 mt-10 leading-tight">
                 {heroContent[currentImageIndex].slogan}
               </h1>
               <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -129,36 +129,10 @@ const HeroSection = () => {
               }}
               whileTap={{ scale: 0.95 }}
               onClick={scrollToContact}
-              className="bg-blue-500 text-white font-semibold px-8 py-4 mt-10 rounded-md hover:bg-blue-600 transition-all duration-300 text-lg"
+              className="bg-white text-black font-semibold px-8 py-4 mt-10 rounded-md hover:bg-gray-200 transition-all duration-300 text-lg"
             >
-              LET'S TALK →
+              Contact Us →
             </motion.button>
-          </AnimatedSection>
-
-          <AnimatedSection direction="up" delay={0.8}>
-            <motion.div
-              animate={{
-                y: [-20, -30, -20],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-            >
-              <svg
-                className="w-6 h-6 text-white"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-              </svg>
-            </motion.div>
           </AnimatedSection>
         </div>
       </div>

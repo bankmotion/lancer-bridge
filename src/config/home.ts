@@ -96,7 +96,7 @@ export const OurServices = [
     description: "Static & Dynamic Code Analysis",
     icon: CodeBlock,
     iconWeight: "duotone",
-  }
+  },
 ];
 
 export const OurStats = [
@@ -359,63 +359,64 @@ export interface PortfolioProject {
 export const PortfolioProjects: PortfolioProject[] = [
   {
     title: "Fieldmacro - Voice Agent",
-    description: "AI-powered voice agent solution that revolutionizes client onboarding and management.",
+    description:
+      "AI-powered voice agent solution that revolutionizes client onboarding and management.",
     image: "/assets/imgs/projects/robot.png",
     results: [
       { title: "120% faster client onboarding" },
-      { title: "60% less effort for client management" }
-    ]
+      { title: "60% less effort for client management" },
+    ],
   },
   {
     title: "Bnbmafia - Web3 P2E Strategy Game",
-    description: "Innovative Web3 Play-to-Earn strategy game with engaging gameplay mechanics.",
+    description:
+      "Innovative Web3 Play-to-Earn strategy game with engaging gameplay mechanics.",
     image: "/assets/imgs/projects/mafia.png",
     link: "https://bnbmafia.io",
-    results: [
-      { title: "1,000 daily active users" }
-    ]
+    results: [{ title: "1,000 daily active users" }],
   },
   {
     title: "Undr.ai - AI Insurance Broker",
-    description: "Advanced AI-powered insurance broker platform transforming report generation.",
+    description:
+      "Advanced AI-powered insurance broker platform transforming report generation.",
     image: "/assets/imgs/projects/urm.png",
-    results: [
-      { title: "15x faster insurance report generation" }
-    ]
+    results: [{ title: "15x faster insurance report generation" }],
   },
   {
     title: "Solpot - Solana Betting Platform",
-    description: "The #1 On-Chain Solana Betting Platform with advanced features and user-friendly interface.",
+    description:
+      "The #1 On-Chain Solana Betting Platform with advanced features and user-friendly interface.",
     image: "/assets/imgs/projects/solpot.png",
     link: "https://solpot.com",
     results: [
       { title: "5,000 daily users" },
       { title: "50,000 total users" },
-      { title: "$2M seed funding" }
-    ]
+      { title: "$2M seed funding" },
+    ],
   },
   {
     title: "RAM.ai - AI Chat Random Access Memory",
-    description: "Innovative AI Chat Random Access Memory web application for enhanced conversational AI.",
+    description:
+      "Innovative AI Chat Random Access Memory web application for enhanced conversational AI.",
     image: "/assets/imgs/projects/ram.png",
-    results: []
+    results: [
+      { title: "100% faster response time" },
+      { title: "90% accuracy in answering questions" },
+    ],
   },
   {
     title: "Piteas - Pulsechain DEX Aggregator",
-    description: "The best DEX aggregator on Pulsechain, providing efficient trading solutions.",
+    description:
+      "The best DEX aggregator on Pulsechain, providing efficient trading solutions.",
     image: "/assets/imgs/projects/piteas.png",
     link: "https://app.piteas.io/",
-    results: [
-      { title: "60,000+ users" },
-      { title: "1,000 daily profit" }
-    ]
+    results: [{ title: "60,000+ users" }, { title: "1,000 daily profit" }],
   },
   {
     title: "AfterLib - Facebook Ad Lister",
-    description: "Powerful Facebook ad listing platform with advanced features and analytics.",
+    description:
+      "Powerful Facebook ad listing platform with advanced features and analytics.",
     image: "/assets/imgs/projects/afterlib.png",
-    results: [
-      { title: "1M+ ads processed" }
-    ]
-  }
+    results: [{ title: "1M+ ads processed" }],
+  },
 ];
