@@ -24,9 +24,10 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link
             to="/"
-            className="text-2xl font-bold text-primary-600 dark:text-primary-400"
+            className="text-2xl font-bold text-primary-600 dark:text-primary-400 flex items-center gap-2"
           >
             <img src="/assets/imgs/logo.png" alt="LancerBridge" className="h-10" />
+            <span className="text-2xl font-bold text-primary-600 dark:text-primary-400">LancerBridge</span> 
           </Link>
 
           {/* Desktop Navigation */}
