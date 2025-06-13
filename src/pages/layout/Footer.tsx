@@ -1,7 +1,7 @@
 import { SocialIcons } from "@/config/footer";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import React from "react";
-import CopyToClipboard from '@/components/CopyToClipboard';
+import CopyToClipboard from "@/components/CopyToClipboard";
 
 const Footer: React.FC = () => {
   return (
@@ -10,11 +10,14 @@ const Footer: React.FC = () => {
         {/* Logo & Menu */}
         <div>
           <div className="text-2xl font-bold mb-6 text-white">
-            lancer<span className="text-blue-400">bridge</span>
+            <span className="text-blue-400">LancerBridge</span>
           </div>
           <ul className="space-y-3 text-sm">
             {["About", "Careers", "Blogs", "Portfolio"].map((item) => (
-              <li key={item} className="hover:text-blue-400 transition-colors cursor-pointer">
+              <li
+                key={item}
+                className="hover:text-blue-400 transition-colors cursor-pointer"
+              >
                 {item}
               </li>
             ))}
@@ -33,9 +36,12 @@ const Footer: React.FC = () => {
               "CRM Services",
               "ERP Services",
               "Digital Commerce",
-              "System Integration"
+              "System Integration",
             ].map((service) => (
-              <li key={service} className="hover:text-blue-400 transition-colors cursor-pointer">
+              <li
+                key={service}
+                className="hover:text-blue-400 transition-colors cursor-pointer"
+              >
                 {service}
               </li>
             ))}
@@ -44,15 +50,22 @@ const Footer: React.FC = () => {
 
         {/* Engineering + Mobile */}
         <div>
-          <h4 className="font-semibold mb-4 text-white">Software Engineering</h4>
+          <h4 className="font-semibold mb-4 text-white">
+            Software Engineering
+          </h4>
           <ul className="text-sm mb-6 space-y-2">
             {["Java", "MERN", "LAMP (+ React JS)"].map((tech) => (
-              <li key={tech} className="hover:text-blue-400 transition-colors cursor-pointer">
+              <li
+                key={tech}
+                className="hover:text-blue-400 transition-colors cursor-pointer"
+              >
                 {tech}
               </li>
             ))}
           </ul>
-          <h4 className="font-semibold mb-4 text-white">Mobile App Development</h4>
+          <h4 className="font-semibold mb-4 text-white">
+            Mobile App Development
+          </h4>
           <ul className="text-sm space-y-2">
             {[
               "Native App Development",
@@ -60,9 +73,12 @@ const Footer: React.FC = () => {
               "Legacy App Modernization",
               "Progressive Web App Development",
               "Bluetooth-enabled Apps",
-              "Smart TV Apps"
+              "Smart TV Apps",
             ].map((service) => (
-              <li key={service} className="hover:text-blue-400 transition-colors cursor-pointer">
+              <li
+                key={service}
+                className="hover:text-blue-400 transition-colors cursor-pointer"
+              >
                 {service}
               </li>
             ))}
@@ -73,9 +89,7 @@ const Footer: React.FC = () => {
         <div>
           <h4 className="font-semibold mb-4 text-white">Contact Us</h4>
           <CopyToClipboard text="hello@lancerbridge.com">
-            <a 
-              className="text-blue-400 hover:text-blue-300 transition-colors text-lg font-medium block mb-6"
-            >
+            <a className="text-blue-400 hover:text-blue-300 transition-colors text-lg font-medium block mb-6">
               hello@lancerbridge.com
             </a>
           </CopyToClipboard>
