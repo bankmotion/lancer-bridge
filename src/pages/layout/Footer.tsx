@@ -1,10 +1,11 @@
 import { SocialIcons } from "@/config/footer";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import React from "react";
+import CopyToClipboard from '@/components/CopyToClipboard';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-16 px-6">
+    <footer id="contact" className="bg-gray-900 text-gray-300 py-16 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* Logo & Menu */}
         <div>
@@ -68,45 +69,30 @@ const Footer: React.FC = () => {
           </ul>
         </div>
 
-        {/* Newsletter & Social */}
+        {/* Contact & Social */}
         <div>
-          <h4 className="font-semibold mb-4 text-white">Subscribe to our Newsletter!</h4>
-          <div className="flex">
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="w-full p-3 border border-gray-700 rounded-l-md text-sm bg-gray-800 focus:outline-none focus:border-blue-400 transition-colors"
-            />
-            <button className="bg-blue-500 hover:bg-blue-600 p-3 rounded-r-md transition-colors">
-              <ArrowRightIcon className="w-5 h-5 text-white" />
-            </button>
-          </div>
-
-          <div className="flex space-x-5 mt-8">
-            {SocialIcons.map((icon) => (
-              <a
-                key={icon.Name}
-                href={icon.Link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:opacity-80 transition-opacity"
-              >
-                <img src={icon.Icon} alt={icon.Name} className="w-6 h-6" />
-              </a>
-            ))}
-          </div>
-
-          <div className="mt-8 space-y-3">
-            <div className="bg-gray-800 w-28 h-7 flex items-center justify-center rounded text-xs font-medium">
-              DMCA PROTECTED
-            </div>
-            <div className="flex space-x-3">
-              <div className="bg-gray-800 w-14 h-14 flex items-center justify-center rounded-full text-xs font-medium hover:bg-gray-700 transition-colors cursor-pointer">
-                Clutch 1000
-              </div>
-              <div className="bg-gray-800 w-14 h-14 flex items-center justify-center rounded-full text-xs font-medium hover:bg-gray-700 transition-colors cursor-pointer">
-                Inc. 5000
-              </div>
+          <h4 className="font-semibold mb-4 text-white">Contact Us</h4>
+          <CopyToClipboard text="hello@lancerbridge.com">
+            <a 
+              className="text-blue-400 hover:text-blue-300 transition-colors text-lg font-medium block mb-6"
+            >
+              hello@lancerbridge.com
+            </a>
+          </CopyToClipboard>
+          <div className="mt-6">
+            <h4 className="font-semibold mb-4 text-white">Connect With Us</h4>
+            <div className="flex space-x-4">
+              {SocialIcons.map((icon) => (
+                <a
+                  key={icon.Name}
+                  href={icon.Link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-blue-400 transition-colors"
+                >
+                  <img src={icon.Icon} alt={icon.Name} className="w-6 h-6" />
+                </a>
+              ))}
             </div>
           </div>
         </div>

@@ -4,6 +4,7 @@ import ServicesSection from "./ServicesSection";
 import TechPartner from "./TechPartner";
 import GlobalFootprinter from "./GlobalFootprinter";
 import TechnologiesSection from "./TechnologiesSection";
+import PortfolioSection from "./PortfolioSection";
 
 const Home: React.FC = () => {
   return (
@@ -17,14 +18,24 @@ const Home: React.FC = () => {
       <section id="services">
         <ServicesSection />
       </section>
-      {/* Global Footprinter */}
+
+      {/* Portfolio */}
+      <section id="portfolio">
+        <PortfolioSection />
+      </section>
+      
+      {/* Global Presence */}
+      <section id="global-presence">
       <GlobalFootprinter />
+      </section>
 
       {/* Tech Partners */}
+      <section id="tech-partners">
       <TechPartner />
+      </section>
 
-      {/* Technologes */}
-      <section id="services">
+      {/* Technologies */}
+      <section id="technologies">
         <TechnologiesSection />
       </section>
     </main>

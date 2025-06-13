@@ -26,7 +26,7 @@ const Header: React.FC = () => {
             to="/"
             className="text-2xl font-bold text-primary-600 dark:text-primary-400"
           >
-            LancerBridge
+            <img src="/assets/imgs/logo.png" alt="LancerBridge" className="h-10" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -45,21 +45,7 @@ const Header: React.FC = () => {
 
           {/* Right Section */}
           <div className="flex items-center space-x-4">
-            <button className="p-2 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-              <MagnifyingGlassIcon className="h-6 w-6" />
-            </button>
-            <Link
-              to="/contact"
-              className="hidden md:block px-4 py-2 bg-primary-600 dark:bg-primary-500 text-white rounded-md hover:bg-primary-700 dark:hover:bg-primary-600 transition-colors"
-            >
-              Contact Us
-            </Link>
-            <button
-              onClick={() => setIsMobileMenuOpen(true)}
-              className="md:hidden p-2 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-            >
-              <Bars3Icon className="h-6 w-6" />
-            </button>
+            
           </div>
         </div>
       </div>

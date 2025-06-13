@@ -13,33 +13,38 @@ export interface MenuItem {
 
 export const navigationItems: MenuItem[] = [
   {
-    title: 'Home',
-    path: '/',
-    sectionId: 'hero'
+    title: "Home",
+    path: "/",
+    sectionId: "hero",
   },
   {
-    title: 'Features',
-    path: '/#features',
-    sectionId: 'features'
+    title: "Services",
+    path: "/#services",
+    sectionId: "services",
   },
   {
-    title: 'Services',
-    path: '/#services',
-    sectionId: 'services'
+    title: "Portfolio",
+    path: "/#portfolio",
+    sectionId: "portfolio",
   },
   {
-    title: 'Case Studies',
-    path: '/#case-studies',
-    sectionId: 'case-studies'
+    title: "Global Presence",
+    path: "/#global-presence",
+    sectionId: "global-presence",
   },
   {
-    title: 'Blog',
-    path: '/#blog',
-    sectionId: 'blog'
+    title: "Tech Partners",
+    path: "/#tech-partners",
+    sectionId: "tech-partners",
   },
   {
-    title: 'Articles',
-    path: '/#articles',
-    sectionId: 'articles'
-  }
-]; 
+    title: "Technologies",
+    path: "/#technologies",
+    sectionId: "technologies",
+  },
+  {
+    title: "Contact",
+    path: "/#contact",
+    sectionId: "contact",
+  },
+];

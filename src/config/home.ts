@@ -1,3 +1,18 @@
+import {
+  Brain,
+  ChatCircleText,
+  Flask,
+  Cube,
+  Database,
+  Cloud,
+  Network,
+  ChartLine,
+  CodeBlock,
+  Money,
+  Lock,
+  CodeSimple,
+} from "@phosphor-icons/react";
+
 export const TechText = [
   {
     title: "Full Stack Innovation",
@@ -23,64 +38,88 @@ export const TechText = [
 
 export const OurServices = [
   {
-    title: "Custom Software Development",
-    icon: "https://d1e5ggoymkuik7.cloudfront.net/uploads/categories/05062024_004039_custom-software-development.svg",
+    title: "Applied AI Solutions",
+    description: "Business-specific ML and AI system development",
+    icon: Brain,
+    iconWeight: "duotone",
   },
   {
-    title: "Digital Commerce",
-    icon: "https://d1e5ggoymkuik7.cloudfront.net/uploads/categories/05062024_004026_digital-commerce.svg",
+    title: "LLM & GenAI Integration",
+    description: "Custom solutions using GPT, Claude, and open-source models",
+    icon: ChatCircleText,
+    iconWeight: "duotone",
   },
   {
-    title: "Salesforce Implementation",
-    icon: "https://d1e5ggoymkuik7.cloudfront.net/uploads/categories/05062024_004016_Salesforce.svg",
+    title: "Custom Model Training",
+    description: "Tailored models for domain-specific use cases",
+    icon: Flask,
+    iconWeight: "duotone",
+  },
+  {
+    title: "Web3 Engineering",
+    description: "Blockchain and decentralized application development",
+    icon: Cube,
+    iconWeight: "duotone",
   },
   {
     title: "NetSuite Implementation",
-    icon: "https://d1e5ggoymkuik7.cloudfront.net/uploads/categories/05062024_004005_Netsuite.svg",
-  },
-  {
-    title: "Generative AI",
-    icon: "https://d1e5ggoymkuik7.cloudfront.net/uploads/categories/05062024_003955_Generative-AI.svg",
-  },
-  {
-    title: "Software Engineering",
-    icon: "https://d1e5ggoymkuik7.cloudfront.net/uploads/categories/05062024_003944_Software-Engineering.svg",
+    description: "Enterprise resource planning and business management",
+    icon: Database,
+    iconWeight: "duotone",
   },
   {
     title: "Cloud Engineering",
-    icon: "https://d1e5ggoymkuik7.cloudfront.net/uploads/categories/05062024_003932_Cloud-Engineering.svg",
+    description: "Scalable cloud infrastructure and solutions",
+    icon: Cloud,
+    iconWeight: "duotone",
   },
   {
     title: "Data Engineering",
-    icon: "https://d1e5ggoymkuik7.cloudfront.net/uploads/categories/05062024_003919_Progressive-Web-Apps-PWA.svg",
+    description: "Data pipeline and analytics infrastructure",
+    icon: ChartLine,
+    iconWeight: "duotone",
   },
   {
-    title: "System Integration",
-    icon: "https://d1e5ggoymkuik7.cloudfront.net/uploads/categories/05062024_003901_System-Integration.svg",
+    title: "Fintech Platforms",
+    description: "Financial technology solutions and platforms",
+    icon: Money,
+    iconWeight: "duotone",
   },
+  {
+    title: "Compliance Automation",
+    description: "Automated regulatory compliance solutions",
+    icon: Lock,
+    iconWeight: "duotone",
+  },
+  {
+    title: "Code Analysis",
+    description: "Static & Dynamic Code Analysis",
+    icon: CodeBlock,
+    iconWeight: "duotone",
+  }
 ];
 
 export const OurStats = [
   {
-    value: "70+",
+    value: "10+",
     label: "Valued Customers",
     description:
       "We prioritize our clients' success and strive to cultivate strong, enduring partnerships.",
   },
   {
-    value: "250+",
+    value: "50+",
     label: "Projects Delivered",
     description:
       "We take pride in every project delivered, embracing accountability for our successes and challenges.",
   },
   {
-    value: "175+",
+    value: "5+",
     label: "Team Members",
     description:
       "Our team members are the heart and soul of our organization, driving innovation and excellence.",
   },
   {
-    value: "5",
+    value: "3",
     label: "Global Offices",
     description:
       "Our global presence strengthens our ability to serve you with unparalleled expertise and support.",
@@ -269,48 +308,114 @@ export const CaseStudies = [
 
 export const TechPartners = [
   {
-    title: "Bob Rolf, CIO at mid-logix",
+    title: "Fieldmacro.com - Voice Agent",
     description:
-      "Lacnerbridge's team automated all of our business processes, saving massive hours. They ask a lot of questions to understand our business and provide the right solutions.",
+      "Our AI-powered voice agent solution achieved 120% faster client onboarding and reduced client management effort by 60%.",
   },
   {
-    title: "Sarah Lee, CTO at InnovateX",
+    title: "Bnbmafia.io - Web3 P2E Strategy Game",
     description:
-      "Their cloud migration expertise was top-notch. We saw a 40% reduction in infrastructure costs!",
+      "Successfully launched a Web3 Play-to-Earn strategy game that attracted 1,000 daily active users.",
   },
   {
-    title: "Michael Chen, VP Engineering at DataCore",
+    title: "Undr.ai - AI Insurance Broker",
     description:
-      "The AI integration project exceeded our expectations. Our workflows are now smarter and faster.",
+      "Developed an AI-powered insurance broker platform that generates insurance reports 15x faster than traditional methods.",
   },
   {
-    title: "Priya Singh, Head of IT at RetailPro",
+    title: "Solpot.com - Solana Betting Platform",
     description:
-      "Seamless Salesforce implementation and great support throughout. Highly recommended!",
+      "Built the #1 On-Chain Solana Betting Platform with 5,000 daily users, 50,000 total users, and secured $2M in seed funding.",
   },
   {
-    title: "David Kim, CEO at FinEdge",
+    title: "RAM.ai - AI Chat Random Access Memory",
     description:
-      "Their team delivered a robust, scalable solution for our fintech platform. Excellent communication.",
+      "Created an innovative AI Chat Random Access Memory web application for enhanced conversational AI capabilities.",
   },
   {
-    title: "Anna Müller, COO at HealthSync",
+    title: "Piteas - Pulsechain DEX Aggregator",
     description:
-      "We improved patient data security and compliance thanks to their cloud engineering expertise.",
+      "Developed the best DEX aggregator on Pulsechain, serving 60,000+ users with maximum daily profits of 1,000.",
   },
   {
-    title: "Lucas Rossi, Product Manager at ShopEase",
+    title: "AfterLib - Facebook Ad Lister",
     description:
-      "Our e-commerce site is faster and more reliable. The digital commerce team is fantastic!",
+      "Built a powerful Facebook ad listing platform that has processed over 1 million ads.",
+  },
+];
+
+export interface PortfolioResult {
+  title: string;
+}
+
+export interface PortfolioProject {
+  title: string;
+  description: string;
+  image: string;
+  results: PortfolioResult[];
+  link?: string;
+}
+
+export const PortfolioProjects: PortfolioProject[] = [
+  {
+    title: "Fieldmacro - Voice Agent",
+    description: "AI-powered voice agent solution that revolutionizes client onboarding and management.",
+    image: "/assets/imgs/projects/robot.png",
+    results: [
+      { title: "120% faster client onboarding" },
+      { title: "60% less effort for client management" }
+    ]
   },
   {
-    title: "Fatima Zahra, CIO at EduNext",
-    description:
-      "Their data engineering team helped us unlock new insights from our student analytics.",
+    title: "Bnbmafia - Web3 P2E Strategy Game",
+    description: "Innovative Web3 Play-to-Earn strategy game with engaging gameplay mechanics.",
+    image: "/assets/imgs/projects/mafia.png",
+    link: "https://bnbmafia.io",
+    results: [
+      { title: "1,000 daily active users" }
+    ]
   },
   {
-    title: "Omar Farouk, CTO at LogiChain",
-    description:
-      "System integration was smooth and on time. Our operations are now fully automated.",
+    title: "Undr.ai - AI Insurance Broker",
+    description: "Advanced AI-powered insurance broker platform transforming report generation.",
+    image: "/assets/imgs/projects/urm.png",
+    results: [
+      { title: "15x faster insurance report generation" }
+    ]
   },
+  {
+    title: "Solpot - Solana Betting Platform",
+    description: "The #1 On-Chain Solana Betting Platform with advanced features and user-friendly interface.",
+    image: "/assets/imgs/projects/solpot.png",
+    link: "https://solpot.com",
+    results: [
+      { title: "5,000 daily users" },
+      { title: "50,000 total users" },
+      { title: "$2M seed funding" }
+    ]
+  },
+  {
+    title: "RAM.ai - AI Chat Random Access Memory",
+    description: "Innovative AI Chat Random Access Memory web application for enhanced conversational AI.",
+    image: "/assets/imgs/projects/ram.png",
+    results: []
+  },
+  {
+    title: "Piteas - Pulsechain DEX Aggregator",
+    description: "The best DEX aggregator on Pulsechain, providing efficient trading solutions.",
+    image: "/assets/imgs/projects/piteas.png",
+    link: "https://app.piteas.io/",
+    results: [
+      { title: "60,000+ users" },
+      { title: "1,000 daily profit" }
+    ]
+  },
+  {
+    title: "AfterLib - Facebook Ad Lister",
+    description: "Powerful Facebook ad listing platform with advanced features and analytics.",
+    image: "/assets/imgs/projects/afterlib.png",
+    results: [
+      { title: "1M+ ads processed" }
+    ]
+  }
 ];
