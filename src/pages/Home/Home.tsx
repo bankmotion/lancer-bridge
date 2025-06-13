@@ -1,43 +1,32 @@
 import React from "react";
-import ArticlesSection from "./ArticlesSection";
-import BlogSection from "./BlogSection";
-import CaseStudySection from "./CaseStudySection";
-import ClientLogoSection from "./ClientLogoSection";
-import FeatureSection from "./FeatureSection";
 import HeroSection from "./HeroSection";
 import ServicesSection from "./ServicesSection";
-import StatsSection from "./StatsSection";
 import TechPartner from "./TechPartner";
+import GlobalFootprinter from "./GlobalFootprinter";
+import TechnologiesSection from "./TechnologiesSection";
 
 const Home: React.FC = () => {
   return (
     <main className="text-gray-800">
       {/* Hero Section */}
-      <HeroSection />
-
-      {/* Features */}
-      <FeatureSection />
+      <section id="hero">
+        <HeroSection />
+      </section>
 
       {/* Services */}
-      <ServicesSection />
-
-      {/* Stats */}
-      <StatsSection />
-
-      {/* Case Study Preview */}
-      <CaseStudySection />
-
-      {/* Client Logo */}
-      <ClientLogoSection />
+      <section id="services">
+        <ServicesSection />
+      </section>
+      {/* Global Footprinter */}
+      <GlobalFootprinter />
 
       {/* Tech Partners */}
       <TechPartner />
 
-      {/* Blog / News */}
-      <BlogSection />
-
-      {/* Latest Articles */}
-      <ArticlesSection />
+      {/* Technologes */}
+      <section id="services">
+        <TechnologiesSection />
+      </section>
     </main>
   );
 };

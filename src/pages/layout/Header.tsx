@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
 import { MagnifyingGlassIcon, Bars3Icon } from "@heroicons/react/24/outline";
 import { navigationItems } from "@/types/navigation";
 import MobileMenu from "./MobileMenu";
 
 const Header: React.FC = () => {
-  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, sectionId?: string) => {
+    if (sectionId) {
+      e.preventDefault();
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 dark:bg-gray-900/95 shadow-md z-50">
@@ -24,42 +32,14 @@ const Header: React.FC = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigationItems.map((item) => (
-              <div
+              <Link
                 key={item.path}
-                className="relative"
-                onMouseEnter={() => setActiveSubmenu(item.path)}
-                onMouseLeave={() => setActiveSubmenu(null)}
+                to={item.path}
+                onClick={(e) => handleNavigation(e, item.sectionId)}
+                className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
               >
-                <Link
-                  to={item.path}
-                  className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                >
-                  {item.title}
-                </Link>
-
-                {/* Submenu */}
-                <AnimatePresence>
-                  {activeSubmenu === item.path && item.submenu && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 w-64 bg-white dark:bg-gray-800 shadow-lg rounded-lg py-2 mt-2"
-                    >
-                      {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.path}
-                          to={subItem.path}
-                          className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-gray-700 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                        >
-                          {subItem.title}
-                        </Link>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+                {item.title}
+              </Link>
             ))}
           </nav>
 

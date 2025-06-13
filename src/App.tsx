@@ -1,10 +1,10 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { store } from './store';
-import { ThemeProvider } from './context/ThemeContext';
-import MainLayout from './pages/layout/MainLayout';
-import Home from './pages/Home/Home';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Provider } from "react-redux";
+import { store } from "./store";
+import { ThemeProvider } from "./context/ThemeContext";
+import MainLayout from "./pages/layout/MainLayout";
+import Home from "./pages/Home/Home";
 
 const App: React.FC = () => {
   return (
@@ -23,4 +23,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App; 
+export default App;

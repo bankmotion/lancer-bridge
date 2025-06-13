@@ -16,7 +16,7 @@ const rightFade = {
   transition: { duration: 0.7, ease: "easeOut" },
 };
 
-const BlogSection = () => {
+const TechnologiesSection = () => {
   return (
     <section className="bg-white py-20">
       <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
@@ -59,4 +59,4 @@ const BlogSection = () => {
   );
 };
 
-export default BlogSection;
+export default TechnologiesSection;

@@ -12,10 +12,14 @@ const staggerContainer = {
 
 const bounceIn = {
   initial: { scale: 0.5, opacity: 0 },
-  animate: { scale: 1, opacity: 1, transition: { type: "spring", stiffness: 400, damping: 20 } },
+  animate: {
+    scale: 1,
+    opacity: 1,
+    transition: { type: "spring", stiffness: 400, damping: 20 },
+  },
 };
 
-const StatsSection = () => {
+const GlobalFootprinter = () => {
   return (
     <>
       <section className="bg-white py-20">
@@ -71,4 +75,4 @@ const StatsSection = () => {
   );
 };
 
-export default StatsSection;
+export default GlobalFootprinter;

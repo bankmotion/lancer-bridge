@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { XMarkIcon } from '@heroicons/react/24/outline';
@@ -10,7 +10,16 @@ interface MobileMenuProps {
 }
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
-  const [expandedMenu, setExpandedMenu] = useState<string | null>(null);
+  const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, sectionId?: string) => {
+    if (sectionId) {
+      e.preventDefault();
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    onClose();
+  };
 
   return (
     <AnimatePresence>
@@ -48,43 +57,14 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
 
               <nav className="space-y-4">
                 {navigationItems.map((item) => (
-                  <div key={item.path}>
-                    <button
-                      onClick={() => setExpandedMenu(expandedMenu === item.path ? null : item.path)}
-                      className="flex items-center justify-between w-full text-left text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
-                    >
-                      <span>{item.title}</span>
-                      <motion.span
-                        animate={{ rotate: expandedMenu === item.path ? 180 : 0 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        ▼
-                      </motion.span>
-                    </button>
-
-                    <AnimatePresence>
-                      {expandedMenu === item.path && item.submenu && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.2 }}
-                          className="pl-4 mt-2 space-y-2"
-                        >
-                          {item.submenu.map((subItem) => (
-                            <Link
-                              key={subItem.path}
-                              to={subItem.path}
-                              className="block text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400"
-                              onClick={onClose}
-                            >
-                              {subItem.title}
-                            </Link>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    onClick={(e) => handleNavigation(e, item.sectionId)}
+                    className="block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+                  >
+                    {item.title}
+                  </Link>
                 ))}
               </nav>
 
