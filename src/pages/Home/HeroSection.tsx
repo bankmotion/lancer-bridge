@@ -138,7 +138,7 @@ const HeroSection = () => {
                 onClick={scrollToContact}
                 className="bg-white text-black font-semibold px-8 py-4 mt-10 rounded-md hover:bg-gray-200 transition-all duration-300 text-lg"
               >
-                Contact Us →
+                Contact Us
               </motion.button>
             </motion.div>
           </AnimatePresence>

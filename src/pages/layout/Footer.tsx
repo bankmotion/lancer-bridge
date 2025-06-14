@@ -9,7 +9,8 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* Logo & Menu */}
         <div>
-          <div className="text-2xl font-bold mb-6 text-white">
+          <div className="text-2xl font-bold mb-6 text-white flex items-center gap-2">
+            <img src="/logo.png" alt="LancerBridge" className="w-10 h-10" />
             <span className="text-blue-400">LancerBridge</span>
           </div>
           <ul className="space-y-3 text-sm">
