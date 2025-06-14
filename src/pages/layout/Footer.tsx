@@ -2,24 +2,49 @@ import { SocialIcons } from "@/config/footer";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import CopyToClipboard from "@/components/CopyToClipboard";
+import { navigationItems } from "@/types/navigation";
+import { useNavigate } from "react-router-dom";
 
 const Footer: React.FC = () => {
+  const navigate = useNavigate();
+  const handleNavigation = (
+    e: React.MouseEvent<HTMLLIElement>,
+    sectionId?: string
+  ) => {
+    if (sectionId) {
+      e.preventDefault();
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
   return (
     <footer id="contact" className="bg-gray-900 text-gray-300 py-16 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* Logo & Menu */}
         <div>
           <div className="text-2xl font-bold mb-6 text-white flex items-center gap-2">
-            <img src="/assets/imgs/logo.png" alt="LancerBridge" className="w-10 h-10" />
+            <img
+              src="/assets/imgs/logo.png"
+              alt="LancerBridge"
+              className="w-10 h-10"
+            />
             <span className="text-blue-400">LancerBridge</span>
           </div>
           <ul className="space-y-3 text-sm">
-            {["About", "Careers", "Blogs", "Portfolio"].map((item) => (
+            {navigationItems.map((item) => (
               <li
-                key={item}
+                key={item.path}
                 className="hover:text-blue-400 transition-colors cursor-pointer"
+                onClick={(e) =>
+                  handleNavigation(
+                    e as React.MouseEvent<HTMLLIElement>,
+                    item.sectionId
+                  )
+                }
               >
-                {item}
+                {item.title}
               </li>
             ))}
           </ul>
@@ -39,10 +64,7 @@ const Footer: React.FC = () => {
               "Digital Commerce",
               "System Integration",
             ].map((service) => (
-              <li
-                key={service}
-                className="hover:text-blue-400 transition-colors cursor-pointer"
-              >
+              <li key={service} className="transition-colors cursor-pointer">
                 {service}
               </li>
             ))}
@@ -56,10 +78,7 @@ const Footer: React.FC = () => {
           </h4>
           <ul className="text-sm mb-6 space-y-2">
             {["Java", "MERN", "LAMP (+ React JS)"].map((tech) => (
-              <li
-                key={tech}
-                className="hover:text-blue-400 transition-colors cursor-pointer"
-              >
+              <li key={tech} className="transition-colors cursor-pointer">
                 {tech}
               </li>
             ))}
@@ -76,10 +95,7 @@ const Footer: React.FC = () => {
               "Bluetooth-enabled Apps",
               "Smart TV Apps",
             ].map((service) => (
-              <li
-                key={service}
-                className="hover:text-blue-400 transition-colors cursor-pointer"
-              >
+              <li key={service} className=" transition-colors cursor-pointer">
                 {service}
               </li>
             ))}
