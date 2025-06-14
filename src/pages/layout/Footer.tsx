@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
         {/* Logo & Menu */}
         <div>
           <div className="text-2xl font-bold mb-6 text-white flex items-center gap-2">
-            <img src="/logo.png" alt="LancerBridge" className="w-10 h-10" />
+            <img src="/assets/imgs/logo.png" alt="LancerBridge" className="w-10 h-10" />
             <span className="text-blue-400">LancerBridge</span>
           </div>
           <ul className="space-y-3 text-sm">
