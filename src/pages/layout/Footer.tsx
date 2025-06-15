@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
           </h4>
           <ul className="text-sm space-y-2">
             {[
-              "Native App Development",
+              "Native App Development1",
               "Cross-Platform App Development",
               "Legacy App Modernization",
               "Progressive Web App Development",
