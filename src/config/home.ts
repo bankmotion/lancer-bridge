@@ -362,6 +362,7 @@ export const PortfolioProjects: PortfolioProject[] = [
     description:
       "AI-powered voice agent solution that revolutionizes client onboarding and management.",
     image: "/assets/imgs/projects/robot.png",
+    link: "https://fieldmicro-harper.netlify.app/",
     results: [
       { title: "120% faster client onboarding" },
       { title: "60% less effort for client management" },
@@ -417,6 +418,7 @@ export const PortfolioProjects: PortfolioProject[] = [
     description:
       "Powerful Facebook ad listing platform with advanced features and analytics.",
     image: "/assets/imgs/projects/afterlib.png",
+    link: "https://afterlib.com/",
     results: [{ title: "1M+ ads processed" }],
   },
 ];
