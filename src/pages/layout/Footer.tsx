@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
             ].map((service) => (
               <li
                 key={service}
-                className="hover:text-gray-200 transition-colors cursor-pointer text-gray-400"
+                className="transition-colors cursor-pointer text-gray-400"
               >
                 {service}
               </li>
@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
             {["Java", "MERN", "LAMP (+ React JS)"].map((tech) => (
               <li
                 key={tech}
-                className="hover:text-gray-200 transition-colors cursor-pointer text-gray-400"
+                className="transition-colors cursor-pointer text-gray-400"
               >
                 {tech}
               </li>
@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
             ].map((service) => (
               <li
                 key={service}
-                className="hover:text-gray-200 transition-colors cursor-pointer text-gray-400"
+                className="transition-colors cursor-pointer text-gray-400"
               >
                 {service}
               </li>
