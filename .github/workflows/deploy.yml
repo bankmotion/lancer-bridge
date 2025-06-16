@@ -35,13 +35,16 @@ jobs:
           username: ${{ secrets.HOSTINGER_USER }}
           key: ${{ secrets.HOSTINGER_SSH_KEY }}
           script: |
+            export NVM_BIN="/root/.nvm/versions/node/v20.19.2/bin"
+            export PATH="$NVM_BIN:$PATH"
+
             cd /var/www/lancer-bridge
             echo "✅ Pulling latest changes..."
             git pull origin master
 
-            echo "🔍 Checking for Node and npm..."
+            echo "🔍 Checking for npm..."
             if ! command -v npm >/dev/null; then
-              echo "❌ npm not found. Please install Node.js and npm on your server."
+              echo "❌ npm not found. Exiting."
               exit 1
             fi
 
@@ -50,3 +53,4 @@ jobs:
 
             echo "🔨 Building app..."
             npm run build
+
