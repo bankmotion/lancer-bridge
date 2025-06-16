@@ -6,7 +6,7 @@ import { IconWeight } from "@phosphor-icons/react";
 
 const ServicesSection = () => {
   return (
-    <section className="bg-gray-900 py-20 text-white">
+    <section className="bg-black py-20 text-white">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <AnimatedSection direction="up" className="text-center mb-16">
           <AnimatedText
@@ -32,7 +32,7 @@ const ServicesSection = () => {
                   boxShadow:
                     "0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04)",
                 }}
-                className="flex flex-col items-center justify-center bg-gray-800 rounded-xl p-8 min-h-[220px] transition-all duration-300 shadow-lg hover:bg-gray-700"
+                className="flex flex-col items-center justify-center bg-[#1a1a1a] rounded-xl p-8 min-h-[220px] transition-all duration-300 shadow-lg hover:bg-[#0a0a0a]"
               >
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}

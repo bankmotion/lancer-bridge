@@ -6,7 +6,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const controls = useAnimation();
-  
+
   const heroContent = [
     {
       image: "/assets/imgs/bg/01.png",
@@ -48,7 +48,9 @@ const HeroSection = () => {
     if (Math.abs(offset.x) > threshold) {
       if (offset.x > 0) {
         // Swipe right - go to previous
-        setCurrentImageIndex((prev) => (prev - 1 + heroContent.length) % heroContent.length);
+        setCurrentImageIndex(
+          (prev) => (prev - 1 + heroContent.length) % heroContent.length
+        );
       } else {
         // Swipe left - go to next
         setCurrentImageIndex((prev) => (prev + 1) % heroContent.length);
@@ -57,8 +59,8 @@ const HeroSection = () => {
   };
 
   return (
-    <motion.section 
-      className="relative bg-gray-900 text-white py-32 h-[calc(100vh)] pt-[80px] flex items-end justify-center overflow-hidden select-none cursor-grab active:cursor-grabbing"
+    <motion.section
+      className="relative bg-black text-white py-32 h-[calc(100vh)] pt-[80px] flex items-end justify-center overflow-hidden select-none cursor-grab active:cursor-grabbing"
       drag="x"
       dragConstraints={{ left: 0, right: 0 }}
       dragElastic={0.1}

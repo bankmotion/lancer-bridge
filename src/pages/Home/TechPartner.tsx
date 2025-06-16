@@ -29,7 +29,7 @@ const TechPartner = () => {
 
   return (
     <motion.section 
-      className="bg-gray-900 text-white py-20 cursor-grab active:cursor-grabbing"
+      className="bg-black text-white py-20 cursor-grab active:cursor-grabbing"
       drag="x"
       dragConstraints={{ left: 0, right: 0 }}
       dragElastic={0.2}
@@ -51,10 +51,10 @@ const TechPartner = () => {
                 exit="exit"
                 className="w-full"
               >
-                <blockquote className="italic text-xl md:text-2xl leading-relaxed mb-6">
+                <blockquote className="italic text-xl md:text-2xl leading-relaxed mb-6 text-gray-200">
                   "{TechPartners[index].description}"
                 </blockquote>
-                <p className="mt-2 text-lg font-semibold text-blue-200">
+                <p className="mt-2 text-lg font-semibold text-gray-300">
                   {TechPartners[index].title}
                 </p>
               </motion.div>
@@ -67,8 +67,8 @@ const TechPartner = () => {
             <button
               key={i}
               onClick={() => setIndex(i)}
-              className={`w-3 h-3 rounded-full border border-blue-400 transition-all duration-200 ${
-                index === i ? "bg-blue-400" : "bg-white"
+              className={`w-3 h-3 rounded-full border border-gray-700 transition-all duration-200 ${
+                index === i ? "bg-gray-600" : "bg-transparent hover:bg-gray-800"
               }`}
               aria-label={`Go to testimonial ${i + 1}`}
             />

@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
     }
   };
   return (
-    <footer id="contact" className="bg-gray-900 text-gray-300 py-16 px-6">
+    <footer id="contact" className="bg-black text-gray-300 py-16 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* Logo & Menu */}
         <div>
@@ -30,13 +30,13 @@ const Footer: React.FC = () => {
               alt="LancerBridge"
               className="w-10 h-10"
             />
-            <span className="text-blue-400">LancerBridge</span>
+            <span className="text-gray-200">LancerBridge</span>
           </div>
           <ul className="space-y-3 text-sm">
             {navigationItems.map((item) => (
               <li
                 key={item.path}
-                className="hover:text-blue-400 transition-colors cursor-pointer"
+                className="hover:text-gray-200 transition-colors cursor-pointer text-gray-400"
                 onClick={(e) =>
                   handleNavigation(
                     e as React.MouseEvent<HTMLLIElement>,
@@ -64,7 +64,10 @@ const Footer: React.FC = () => {
               "Digital Commerce",
               "System Integration",
             ].map((service) => (
-              <li key={service} className="transition-colors cursor-pointer">
+              <li
+                key={service}
+                className="hover:text-gray-200 transition-colors cursor-pointer text-gray-400"
+              >
                 {service}
               </li>
             ))}
@@ -78,7 +81,10 @@ const Footer: React.FC = () => {
           </h4>
           <ul className="text-sm mb-6 space-y-2">
             {["Java", "MERN", "LAMP (+ React JS)"].map((tech) => (
-              <li key={tech} className="transition-colors cursor-pointer">
+              <li
+                key={tech}
+                className="hover:text-gray-200 transition-colors cursor-pointer text-gray-400"
+              >
                 {tech}
               </li>
             ))}
@@ -88,14 +94,17 @@ const Footer: React.FC = () => {
           </h4>
           <ul className="text-sm space-y-2">
             {[
-              "Native App Development1",
+              "Native App Development",
               "Cross-Platform App Development",
               "Legacy App Modernization",
               "Progressive Web App Development",
               "Bluetooth-enabled Apps",
               "Smart TV Apps",
             ].map((service) => (
-              <li key={service} className=" transition-colors cursor-pointer">
+              <li
+                key={service}
+                className="hover:text-gray-200 transition-colors cursor-pointer text-gray-400"
+              >
                 {service}
               </li>
             ))}
@@ -106,7 +115,7 @@ const Footer: React.FC = () => {
         <div>
           <h4 className="font-semibold mb-4 text-white">Contact Us</h4>
           <CopyToClipboard text="hello@lancerbridge.com">
-            <a className="text-blue-400 hover:text-blue-300 transition-colors text-lg font-medium block mb-6">
+            <a className="text-blue-500 hover:text-blue-400 transition-colors text-lg font-medium block mb-6">
               hello@lancerbridge.com
             </a>
           </CopyToClipboard>
@@ -119,7 +128,7 @@ const Footer: React.FC = () => {
                   href={icon.Link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
+                  className="text-gray-400 hover:text-gray-200 transition-colors"
                 >
                   <img src={icon.Icon} alt={icon.Name} className="w-6 h-6" />
                 </a>
@@ -131,8 +140,10 @@ const Footer: React.FC = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-800 mt-12 pt-6 text-sm flex flex-col md:flex-row justify-between items-center">
-        <div>© 2025 Lancerbridge Technologies. All Rights Reserved.</div>
-        <div className="mt-2 md:mt-0 hover:text-blue-400 transition-colors cursor-pointer">
+        <div className="text-gray-400">
+          © 2025 Lancerbridge Technologies. All Rights Reserved.
+        </div>
+        <div className="mt-2 md:mt-0 hover:text-gray-200 transition-colors cursor-pointer text-gray-400">
           Privacy Policy
         </div>
       </div>

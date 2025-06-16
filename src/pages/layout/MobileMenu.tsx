@@ -40,7 +40,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 20 }}
-            className="fixed right-0 top-0 bottom-0 w-80 bg-white dark:bg-gray-900 z-50 overflow-y-auto"
+            className="fixed right-0 top-0 bottom-0 w-80 bg-white dark:bg-black z-50 overflow-y-auto"
           >
             <div className="p-4">
               <div className="flex justify-between items-center mb-8">

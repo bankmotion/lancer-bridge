@@ -8,7 +8,7 @@ import PortfolioSection from "./PortfolioSection";
 
 const Home: React.FC = () => {
   return (
-    <main className="text-gray-800">
+    <main className="text-gray-800 bg-black">
       {/* Hero Section */}
       <section id="hero">
         <HeroSection />
