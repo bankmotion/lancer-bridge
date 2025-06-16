@@ -28,9 +28,6 @@ jobs:
           npm install typescript@4.9.5 --save-dev
           npm ci
 
-      - name: Build the app
-        run: npm run build
-
       - name: Deploy to Hostinger via SSH
         uses: appleboy/ssh-action@v1.0.0
         with:
@@ -39,6 +36,17 @@ jobs:
           key: ${{ secrets.HOSTINGER_SSH_KEY }}
           script: |
             cd /var/www/lancer-bridge
+            echo "✅ Pulling latest changes..."
             git pull origin master
+
+            echo "🔍 Checking for Node and npm..."
+            if ! command -v npm >/dev/null; then
+              echo "❌ npm not found. Please install Node.js and npm on your server."
+              exit 1
+            fi
+
+            echo "📦 Installing dependencies..."
             npm ci
+
+            echo "🔨 Building app..."
             npm run build
