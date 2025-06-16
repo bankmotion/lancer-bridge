@@ -29,39 +29,48 @@ const TechPartner = () => {
 
   return (
     <motion.section 
-      className="bg-black text-white py-20 cursor-grab active:cursor-grabbing"
-      drag="x"
-      dragConstraints={{ left: 0, right: 0 }}
-      dragElastic={0.2}
-      onDragEnd={handleDragEnd}
-      whileTap={{ cursor: "grabbing" }}
+      className="bg-gradient-to-b from-black via-gray-950 to-black text-white py-20"
     >
       <div className="max-w-3xl mx-auto px-4 md:px-8 text-center">
         <h2 className="text-2xl md:text-3xl font-bold mb-10">
           What Our Tech Partners Say
         </h2>
-        <div className="relative flex items-center justify-center min-h-[200px] mb-8">
-          <div className="w-full flex justify-center">
-            <AnimatePresence initial={false} mode="wait">
-              <motion.div
-                key={index}
-                variants={fadeVariant}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                className="w-full"
-              >
-                <blockquote className="italic text-xl md:text-2xl leading-relaxed mb-6 text-gray-200">
-                  "{TechPartners[index].description}"
-                </blockquote>
-                <p className="mt-2 text-lg font-semibold text-gray-300">
-                  {TechPartners[index].title}
-                </p>
-              </motion.div>
-            </AnimatePresence>
-          </div>
+        
+        {/* Draggable content */}
+        <div className="relative">
+          <motion.div 
+            className="cursor-grab active:cursor-grabbing"
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.2}
+            onDragEnd={handleDragEnd}
+            whileTap={{ cursor: "grabbing" }}
+          >
+            <div className="relative flex items-center justify-center min-h-[200px] mb-8">
+              <div className="w-full flex justify-center">
+                <AnimatePresence initial={false} mode="wait">
+                  <motion.div
+                    key={index}
+                    variants={fadeVariant}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                    className="w-full"
+                  >
+                    <blockquote className="italic text-xl md:text-2xl leading-relaxed mb-6 text-gray-200">
+                      "{TechPartners[index].description}"
+                    </blockquote>
+                    <p className="mt-2 text-lg font-semibold text-gray-300">
+                      {TechPartners[index].title}
+                    </p>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+            </div>
+          </motion.div>
         </div>
-        {/* Pagination dots */}
+
+        {/* Pagination dots - Now outside the draggable area */}
         <div className="flex justify-center gap-2 mt-2">
           {Array.from({ length: total }).map((_, i) => (
             <button
