@@ -31,10 +31,14 @@ jobs:
       - name: Build the app
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy to Hostinger via SSH
+        uses: appleboy/ssh-action@v1.0.0
         with:
-          personal_token: ${{ secrets.GH_PAGES_TOKEN }}
-          publish_dir: ./build
-          commit_message: "Deploy: ${{ github.event.head_commit.message }}"
-          force_orphan: true
+          host: ${{ secrets.HOSTINGER_HOST }}
+          username: ${{ secrets.HOSTINGER_USER }}
+          key: ${{ secrets.HOSTINGER_SSH_KEY }}
+          script: |
+            cd /var/www/lancer-bridge
+            git pull origin master
+            npm ci
+            npm run build
