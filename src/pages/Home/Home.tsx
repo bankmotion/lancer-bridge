@@ -5,6 +5,7 @@ import TechPartner from "./TechPartner";
 import GlobalFootprinter from "./GlobalFootprinter";
 import TechnologiesSection from "./TechnologiesSection";
 import PortfolioSection from "./PortfolioSection";
+import YouTubeSection from "./YouTubeSection";
 
 const Home: React.FC = () => {
   return (
@@ -12,6 +13,11 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section id="hero">
         <HeroSection />
+      </section>
+
+      {/* YouTube Section */}
+      <section id="youtube">
+        <YouTubeSection />
       </section>
 
       {/* Services */}
