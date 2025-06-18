@@ -15,7 +15,7 @@ export const SocialIcons = [
     Icon: "assets/imgs/socials/instagram.png"
   },
   {
-    Link: "https://www.linkedin.com/company/lancerbridge/",
+    Link: "https://www.linkedin.com/showcase/lancerbridge-software",
     Name: "LinkedIn",
     Icon: "assets/imgs/socials/linkedin.png"
   },
