@@ -101,7 +101,7 @@ const PortfolioSection = () => {
                       alt={PortfolioProjects[currentIndex].title}
                       className="w-full h-full object-cover rounded-lg shadow-xl"
                     />
-                    <div className="absolute inset-0 bg-black/30 rounded-lg" />
+                    <div className="absolute inset-0 rounded-lg" />
                   </div>
                 </div>
                 <div className="p-8 max-w-4xl mx-auto">

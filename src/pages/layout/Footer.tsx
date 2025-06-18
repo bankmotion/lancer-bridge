@@ -128,9 +128,13 @@ const Footer: React.FC = () => {
                   href={icon.Link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-gray-200 transition-colors"
+                  className="text-gray-400 p-0 border-white border-2 hover:text-gray-200 transition-colors w-8 h-8 bg-white rounded-full flex items-center justify-center"
                 >
-                  <img src={icon.Icon} alt={icon.Name} className="w-6 h-6" />
+                  <img
+                    src={icon.Icon}
+                    alt={icon.Name}
+                    className="w-full h-full"
+                  />
                 </a>
               ))}
             </div>
