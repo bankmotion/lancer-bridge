@@ -139,6 +139,15 @@ const Footer: React.FC = () => {
               ))}
             </div>
           </div>
+
+          <div className="text-gray-500 flex items-center gap-2 mt-8">
+            <span className="font-bold">Powered by</span>
+            <img
+              src="/assets/imgs/scalientlabs.png"
+              alt="ScalientLabs"
+              className="w-32"
+            />
+          </div>
         </div>
       </div>
 
@@ -146,9 +155,6 @@ const Footer: React.FC = () => {
       <div className="border-t border-gray-800 mt-12 pt-6 text-sm flex flex-col md:flex-row justify-between items-center">
         <div className="text-gray-400">
           © 2025 Lancerbridge Technologies. All Rights Reserved.
-        </div>
-        <div className="mt-2 md:mt-0 hover:text-gray-200 transition-colors cursor-pointer text-gray-400">
-          Privacy Policy
         </div>
       </div>
     </footer>
