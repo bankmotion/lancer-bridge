@@ -20,7 +20,7 @@ export const SocialIcons = [
     Icon: "assets/imgs/socials/linkedin.png"
   },
   {
-    Link: "https://www.youtube.com/channel/UC-kaTxVPQqBV0xJlMCuAKwQ",
+    Link: "https://www.youtube.com",
     Name: "Youtube",
     Icon: "assets/imgs/socials/youtube.png"
   },
