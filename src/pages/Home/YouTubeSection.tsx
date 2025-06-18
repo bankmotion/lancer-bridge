@@ -16,7 +16,7 @@ const YouTubeSection: React.FC = () => {
         <div className="relative w-full max-w-5xl mx-auto aspect-video rounded-xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
           <iframe
             className="absolute top-0 left-0 w-full h-full"
-            src="https://www.youtube.com/embed/UCkEe0J_BI5wS97w6upCv-ZA"
+            src="https://www.youtube.com/watch?v=LyYhDwZJnQM"
             title="LancerBridge Story"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
