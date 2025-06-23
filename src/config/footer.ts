@@ -24,4 +24,9 @@ export const SocialIcons = [
     Name: "Youtube",
     Icon: "assets/imgs/socials/youtube.png"
   },
+  {
+    Link: "https://t.me/lancerbridge_community",
+    Name: "Telegram",
+    Icon: "assets/imgs/socials/telegram.png"
+  },
 ];
