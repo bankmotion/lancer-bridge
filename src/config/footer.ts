@@ -1,6 +1,6 @@
 export const SocialIcons = [
   {
-    Link: "https://www.facebook.com/lancerbridge/",
+    Link: "https://www.facebook.com/profile.php?id=61577315192061",
     Name: "Facebook",
     Icon: "assets/imgs/socials/facebook.png"
   },
