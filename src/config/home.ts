@@ -113,7 +113,7 @@ export const OurStats = [
       "We take pride in every project delivered, embracing accountability for our successes and challenges.",
   },
   {
-    value: "5+",
+    value: "10+",
     label: "Team Members",
     description:
       "Our team members are the heart and soul of our organization, driving innovation and excellence.",
