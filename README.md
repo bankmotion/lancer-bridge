@@ -41,3 +41,5 @@ src/
    ```bash
    npm run build
    ``` 
+
+<!-- Security scan triggered at 2026-09-05 07:52:33 -->
